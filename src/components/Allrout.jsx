@@ -11,7 +11,7 @@ const Allrout = () => {
     <div>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path='/Product' element={<Product/>}/>
+        <Route path='/Products' element={<Product/>}/>
         <Route path='/Login' element={<Login/>}/>
         <Route path='/Signup' element={<Signup/>}/>
         <Route path='/*' element={<Error/>}/>

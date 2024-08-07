@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
+import Filter from './Filter'; // Ensure the path is correct based on your file structure
 
 const Products = () => {
   const [products, setProducts] = useState([]);
+  const [sortedProducts, setSortedProducts] = useState([]);
+  const [query] = useSearchParams();
 
   useEffect(() => {
     axios
@@ -16,11 +19,29 @@ const Products = () => {
       });
   }, []);
 
+  useEffect(() => {
+    let sorted = [...products];
+    const sortParam = query.get("sort");
+
+    if (sortParam === "LTH") {
+      sorted = sorted.sort((a, b) => a.price - b.price);
+    } else if (sortParam === "HTL") {
+      sorted = sorted.sort((a, b) => b.price - a.price);
+    } else if (sortParam) {
+      sorted = sorted.filter(product => product.category === sortParam);
+    }
+
+    setSortedProducts(sorted);
+  }, [products, query]);
+
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <div className="container mx-auto">
+        <div className="flex justify-end mb-6">
+          <Filter />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.map((product) => (
+          {sortedProducts.map((product) => (
             <Link
               to={`/product/${product.id}`}
               key={product.id}

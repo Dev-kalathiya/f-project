@@ -57,3 +57,14 @@
 // };
 
 // export default ErrorPage;
+import React from 'react'
+
+const Error = () => {
+  return (
+    <div>
+      
+    </div>
+  )
+}
+
+export default Error

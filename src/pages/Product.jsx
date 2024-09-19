@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useSearchParams } from "react-router-dom";
-import Filter from './Filter'; // Ensure the path is correct based on your file structure
+import Filter from './Filter'; 
 
 const Products = () => {
   const [products, setProducts] = useState([]);
   const [sortedProducts, setSortedProducts] = useState([]);
   const [query] = useSearchParams();
 
-  useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((response) => {
-        setProducts(response.data);
-      })
-      .catch((error) => {
-        console.error("Error fetching products:", error);
-      });
-  }, []);
+  // useEffect(() => {
+  //   axios
+  //     .get("https://fakestoreapi.com/products")
+  //     .then((response) => {
+  //       setProducts(response.data);
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error fetching products:", error);
+  //     });
+  // }, []);
 
   useEffect(() => {
     let sorted = [...products];

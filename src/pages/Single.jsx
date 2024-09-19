@@ -1,36 +1,79 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useAuth } from '../AuthContext';
+const Signup = () => {
+  const { signup } = useAuth();  // This line assumes that useAuth is returning an object with a signup function
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phone: '',
+  });
 
-const SingleProduct = () => {
-  const { id } = useParams();
-  const [product, setProduct] = useState({});
-
-  const getSingleProduct = async (id) => {
-    let res = await axios.get(`https://fakestoreapi.com/products/${id}`);
-    setProduct(res.data);
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
-  useEffect(() => {
-    getSingleProduct(id);
-  }, [id]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    signup(formData);
+  };
 
   return (
-    <div className="container mx-auto p-6 bg-gray-100 ">
-      <div className="bg-white shadow-md rounded-lg overflow-hidden p-6">
-        <div className="flex flex-col items-center">
-          <img src={product.image} alt={product.title} className="w-full max-w-xs object-contain mb-6"/>
-          <h3 className="text-2xl font-semibold mb-4">{product.title}</h3>
-          <p className="text-gray-900 font-semibold text-lg mb-4">${product.price}</p>
-          <p className="text-gray-700 mb-4">{product.description}</p>
-          <button className="bg-amber-300 text-red px-2 py-2 rounded-full w-96 flex items-center justify-center">
-            <img src="https://banner2.cleanpng.com/20180905/wph/kisspng-computer-icons-portable-network-graphics-clip-art-ic-shopping-cart-px-svg-png-icon-free-download-1-5b907479023c32.0581863815361936570092.jpg" className="w-4 h-4 mr-2" alt="Add to cart" />
-            Add to Cart
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+        <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={formData.name}
+            onChange={handleChange}
+            className="mb-4 p-2 w-full border rounded-md"
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            value={formData.email}
+            onChange={handleChange}
+            className="mb-4 p-2 w-full border rounded-md"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            value={formData.password}
+            onChange={handleChange}
+            className="mb-4 p-2 w-full border rounded-md"
+          />
+          <input
+            type="password"
+            name="confirmPassword"
+            placeholder="Confirm Password"
+            value={formData.confirmPassword}
+            onChange={handleChange}
+            className="mb-4 p-2 w-full border rounded-md"
+          />
+          <input
+            type="text"
+            name="phone"
+            placeholder="Phone Number"
+            value={formData.phone}
+            onChange={handleChange}
+            className="mb-4 p-2 w-full border rounded-md"
+          />
+          <button type="submit" className="bg-blue-500 text-white py-2 px-4 rounded-md w-full">
+            Sign Up
           </button>
-        </div>
+        </form>
       </div>
     </div>
   );
 };
 
-export default SingleProduct;
+export default Signup;

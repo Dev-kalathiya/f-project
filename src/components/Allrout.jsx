@@ -16,7 +16,7 @@ const Allrout = () => {
     <div>
       <AuthProvider>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/' element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path='/products' element={<Product />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />

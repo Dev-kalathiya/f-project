@@ -9,5 +9,24 @@
       "phone": "9512040222"
     }
   ],
-  "product": []
+  "product": [
+    {
+      "id": "1b33",
+      "title": "w",
+      "price": "100000",
+      "category": "jacket",
+      "image": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745028.jpg?t=st=1726906501~exp=1726910101~hmac=fe4a19163b3db909bad93c60f284a53a0079d6d1678bca217e6b1aba3eee6749&w=1380",
+      "description": "ffqwefef saa"
+    },
+    {
+      "id": "64f8",
+      "title": "q",
+      "price": "5000",
+      "category": "jacket",
+      "image": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745028.jpg?t=st=1726906501~exp=1726910101~hmac=fe4a19163b3db909bad93c60f284a53a0079d6d1678bca217e6b1aba3eee6749&w=1380",
+      "description": "sfww wqfwqfwf"
+    }
+  ],
+  
+  "cart":[]
 }

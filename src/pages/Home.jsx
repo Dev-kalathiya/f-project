@@ -27,56 +27,56 @@ const Home = () => {
     {
       id: 1,
       image:
-        "https://img.freepik.com/free-photo/young-man-running-trail-forest_23-2148776372.jpg?t=st=1726840489~exp=1726844089~hmac=2862f4fcb8c1ee0ee13c74a78694a7123f17aff35e1b3752aaeb07f36816da21&w=1380",
+        "https://i.ibb.co/986sRV1/young-man-running-trail-forest-23-2148776372-transformed.jpg",
       title: "Product 1",
       price: "$100",
     },
     {
       id: 2,
       image:
-        "https://img.freepik.com/free-photo/portrait-young-woman-winter-day_23-2148869554.jpg?t=st=1726840710~exp=1726844310~hmac=e0c8a5de7a89b545c40a52222830113467135958e925ef132442ec538005a967&w=1380",
+        "https://i.ibb.co/WVc2nY7/De-Watermark-ai-1726900120510.png",
       title: "Product 2",
       price: "$120",
     },
     {
       id: 3,
       image:
-        "https://img.freepik.com/free-photo/morning-walk-fresh-air-mountains_651396-2702.jpg?t=st=1726840537~exp=1726844137~hmac=014a94a4b849e48380bbba364541c7ac0171a5b11e3a6b7406cfd6f3c00d4c33&w=1380",
+        "https://i.ibb.co/2SjhTdC/morning-walk-fresh-air-mountains-651396-2702-transformed.jpg",
       title: "Product 3",
       price: "$90",
     },
     {
       id: 4,
       image:
-        "https://img.freepik.com/free-photo/model-wearing-peachy-color-clothing_23-2151428082.jpg?t=st=1726841055~exp=1726844655~hmac=f3a395eb2d257b8037aaeb4bd05aedbd6dfb8b3d45c5a6481b7d3f9f2382c60b&w=1380  ",
+        "https://i.ibb.co/GTpm244/De-Watermark-ai-1726900139848.png ",
       title: "Product 4",
       price: "$150",
     },
     {
       id: 5,
       image:
-        "https://img.freepik.com/free-photo/young-male-traveler-enjoying-rural-surroundings_23-2149125548.jpg?t=st=1726841766~exp=1726845366~hmac=49af24f2ac74e51f968e98b10fd69f9e15abf75b6a3069e3c09c5c9f5a553abe&w=740",
+        "https://i.ibb.co/Bgsc5WP/De-Watermark-ai-1726900292590.png",
       title: "Product 5",
       price: "$110",
     },
     {
       id: 6,
       image:
-        "https://img.freepik.com/free-photo/young-handsome-man-quarry-alone_1303-23776.jpg?t=st=1726841108~exp=1726844708~hmac=0775f5517d345ad33b4f516217336ef8ff0e73723a69e947579c233400107ebe&w=740",
+        "https://i.ibb.co/khVW2rv/young-handsome-man-quarry-alone-1303-23776-transformed.jpg",
       title: "Product 6",
       price: "$80",
     },
     {
       id: 7,
       image:
-        "https://img.freepik.com/free-photo/full-shot-elegant-groom-posing_23-2150327163.jpg?t=st=1726841182~exp=1726844782~hmac=dc5fc9db5fa37325c58eb78518577b63e7fafb75dcd28a206a8aa1b5c19c8675&w=740",
+        "https://i.ibb.co/wJvgWpt/full-shot-elegant-groom-posing-23-2150327163-transformed.jpg",
       title: "Product 7",
       price: "$130",
     },
     {
       id: 8,
       image:
-        "https://img.freepik.com/free-photo/beautiful-woman-portrait-garden_1328-1841.jpg?t=st=1726841281~exp=1726844881~hmac=98a05bf84b4e5cbed6ebfe79cc690eb04f177c8993017878596b46e620d70615&w=1380",
+        "https://i.ibb.co/ftPZkHJ/beautiful-woman-portrait-garden-1328-1841-transformed.jpg",
       title: "Product 8",
       price: "$100",
     },
@@ -96,7 +96,7 @@ const Home = () => {
         className="relative h-screen bg-slate-300 bg-cover bg-center bg-no-repeat flex items-center justify-center"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-photo/brunette-happy-woman-boater-floral-dress-moves-sea-background-charming-curly-lady-stylish-outfit-walks-terrace-with-ocean-view_197531-29930.jpg?ga=GA1.1.1648540889.1726834818)",
+            "url(https://images.unsplash.com/photo-1467779009031-53938b78ca38?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
           filter: "blur(2px)",
         }}
       >
@@ -145,21 +145,21 @@ const Home = () => {
         >
           <div>
             <img
-              src="https://img.freepik.com/free-photo/portrait-handsome-bearded-man-outside_23-2150266914.jpg?t=st=1726839912~exp=1726843512~hmac=16edc8b66bce74f2f1426078c25c6710fb82ab53a79c9960483656b8a405ff52&w=1380"
+              src="https://i.ibb.co/7QT1cjm/portrait-handsome-bearded-man-outside-23-2150266914-transformed.jpg"
               alt="Slide 1"
             />
             <p className="legend">Stylish & Elegant</p>
           </div>
           <div>
             <img
-              src="https://img.freepik.com/free-photo/fulllength-portrait-happy-brunette-lady-midi-dress-boater-posing-terrace-with-sea-view-attractive-woman-hat-floral-outfit-smiles-ocean-background_197531-29941.jpg?t=st=1726838784~exp=1726842384~hmac=00a8a023949b4f4226b54b7b9fd41b993c79d3952c6a91065ad7e1e52a6d765a&w=1380"
+              src="https://i.ibb.co/0YT7VTF/fulllength-portrait-happy-brunette-lady-midi-dress-boater-posing-terrace-with-sea-view-attractive-wo.jpg"
               alt="Slide 2"
             />
             <p className="legend">For the Fashion Conscious</p>
           </div>
           <div>
             <img
-              src="https://img.freepik.com/free-photo/rural-travelers-exploring-surroundings-together_23-2149125446.jpg?t=st=1726839719~exp=1726843319~hmac=ff4b861352aa905c3ff1b9ccb7e30eaac34acdaa93546c09201281626771793e&w=1380"
+              src="https://img.freepik.com/free-photo/happy-girl-straw-hat-dancing-having-fun-terrace_273443-580.jpg?t=st=1726902982~exp=1726906582~hmac=cd1d4ff1979018233f7f31ad5b1c10d77c8418d9b24df4c11c2eba536a971ec7&w=1380"
               alt="Slide 3"
             />
             <p className="legend">Discover Your Style</p>
@@ -172,7 +172,7 @@ const Home = () => {
         className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-photo/abstract-store-with-futuristic-concept-architecture_23-2150861874.jpg?t=st=1726836009~exp=1726839609~hmac=b8a40d95ac928fce64e7ade62e1b2c7b12820bcbd7ace3dee332b482da7e99bb&w=1380)",
+            "url(https://img.freepik.com/free-photo/futuristic-store-with-abstract-concept-architecture_23-2150862090.jpg?t=st=1726902230~exp=1726905830~hmac=ea7cb0bd6aa23081243329fdf3f22a0a58270ed643fabde86c51a28cc681dd80&w=1380)",
         }}
       >
         <div className="text-center">

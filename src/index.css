@@ -4,7 +4,33 @@
 @tailwind components;
 @tailwind utilities;
 
-body{
+
+
+
+/* src/index.css */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --header-background: #f1f1f1;
+    --header-text-color: #333333;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+header {
     font-family: "poppins", sans-serif;
-  
+    background-color: var(--header-background);
+    color: var(--header-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    --background-color: #000000;
+    --text-color: #ffffff;
+    --header-background: #333333;
+    --header-text-color: #f1f1f1;
 }

@@ -11,20 +11,18 @@ import { AuthProvider } from '../AuthContext';  // Ensure this is correctly set 
 import PrivateRoute from '../router/PrivateRoute';
 import Admin from '../pages/Admin';
 
-
 const Allrout = () => {
   return (
-    <div>
+    <div style={{ backgroundColor: 'var(--background-color)', color: 'var(--text-color)' }}>
       <AuthProvider>
         <Routes>
           <Route path='/' element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path='/products' element={<PrivateRoute><Product/></PrivateRoute>} />
-          {/* <Route path='/products' element={<Product />} /> */}
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
           <Route path="/product/:id" element={<SingleProduct />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path='/cartpage' element={<PrivateRoute><CartPage/></PrivateRoute>} />
+          <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
           <Route path='/*' element={<Error />} />
         </Routes>
       </AuthProvider>

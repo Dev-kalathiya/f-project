@@ -159,7 +159,7 @@ const Home = () => {
           </div>
           <div>
             <img
-              src="https://img.freepik.com/free-photo/happy-girl-straw-hat-dancing-having-fun-terrace_273443-580.jpg?t=st=1726902982~exp=1726906582~hmac=cd1d4ff1979018233f7f31ad5b1c10d77c8418d9b24df4c11c2eba536a971ec7&w=1380"
+              src="https://i.ibb.co/DYJkzkN/happy-girl-straw-hat-dancing-having-fun-terrace-273443-580-transformed.jpg"
               alt="Slide 3"
             />
             <p className="legend">Discover Your Style</p>
@@ -172,7 +172,7 @@ const Home = () => {
         className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
         style={{
           backgroundImage:
-            "url(https://img.freepik.com/free-photo/futuristic-store-with-abstract-concept-architecture_23-2150862090.jpg?t=st=1726902230~exp=1726905830~hmac=ea7cb0bd6aa23081243329fdf3f22a0a58270ed643fabde86c51a28cc681dd80&w=1380)",
+            "url(https://i.ibb.co/8jvyHNz/futuristic-store-with-abstract-concept-architecture-23-2150862090-transformed.jpg)",
         }}
       >
         <div className="text-center">

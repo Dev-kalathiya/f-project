@@ -7,6 +7,14 @@
       "password": "kALATHIYA1710@",
       "confirmPassword": "kALATHIYA1710@",
       "phone": "9512040222"
+    },
+    {
+      "id": "d7dd",
+      "name": "dev",
+      "email": "d@gmail.com",
+      "password": "Kalathiya1710@",
+      "confirmPassword": "Kalathiya1710@",
+      "phone": "5897412355"
     }
   ],
   "product": [
@@ -23,7 +31,7 @@
       "title": "q",
       "price": "5000",
       "category": "jacket",
-      "image": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745028.jpg?t=st=1726906501~exp=1726910101~hmac=fe4a19163b3db909bad93c60f284a53a0079d6d1678bca217e6b1aba3eee6749&w=1380",
+      "image": "https://static.zara.net/assets/public/e67a/7911/c08a48aa99a8/27f64aa75ae4/08614554070-e1/08614554070-e1.jpg?ts=1724227036310&w=750&f=auto",
       "description": "sfww wqfwqfwf"
     },
     {
@@ -33,7 +41,7 @@
       "category": "shirt",
       "image": "https://static.zara.net/assets/public/9bec/070d/65174b4b8fb9/a4a0c2d96ae0/05679252401-e1/05679252401-e1.jpg?ts=1723125535033&w=750&f=auto",
       "description": "Relaxed-fit shirt with a camp collar and short sleeves. Split hem. Button-up front.\n\n",
-      "stock": "3"
+      "stock": "5"
     }
   ],
   "cart": []

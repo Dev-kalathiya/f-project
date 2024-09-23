@@ -33,8 +33,7 @@ const Home = () => {
     },
     {
       id: 2,
-      image:
-        "https://i.ibb.co/WVc2nY7/De-Watermark-ai-1726900120510.png",
+      image: "https://i.ibb.co/WVc2nY7/De-Watermark-ai-1726900120510.png",
       title: "Product 2",
       price: "$120",
     },
@@ -47,15 +46,13 @@ const Home = () => {
     },
     {
       id: 4,
-      image:
-        "https://i.ibb.co/GTpm244/De-Watermark-ai-1726900139848.png ",
+      image: "https://i.ibb.co/GTpm244/De-Watermark-ai-1726900139848.png ",
       title: "Product 4",
       price: "$150",
     },
     {
       id: 5,
-      image:
-        "https://i.ibb.co/Bgsc5WP/De-Watermark-ai-1726900292590.png",
+      image: "https://i.ibb.co/Bgsc5WP/De-Watermark-ai-1726900292590.png",
       title: "Product 5",
       price: "$110",
     },

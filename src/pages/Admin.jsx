@@ -11,6 +11,8 @@ const Admin = () => {
     stock: '',
   });
 
+  const baseurl = "https://json-server-deployment-zln4.onrender.com"
+
   const handleChange = (e) => {
     setProduct({ ...product, [e.target.name]: e.target.value });
   };
@@ -18,7 +20,7 @@ const Admin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:3000/product', product);
+      await axios.post(`${baseurl}/product`, product);
       alert('Product added successfully!');
       setProduct({ title: '', price: '', category: '', image: '', description: '', stock: '' });
     } catch (error) {

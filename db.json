@@ -32,7 +32,7 @@
       "price": "5000",
       "category": "jacket",
       "image": "https://static.zara.net/assets/public/e67a/7911/c08a48aa99a8/27f64aa75ae4/08614554070-e1/08614554070-e1.jpg?ts=1724227036310&w=750&f=auto",
-      "description": "Zara Men's Relaxed Fit Fleece Trim  Jacket"
+      "description": "Zara Men's Relaxed Fit Fleece Trim Denim Jacket"
     },
     {
       "id": "3981",
@@ -41,6 +41,15 @@
       "category": "shirt",
       "image": "https://static.zara.net/assets/public/9bec/070d/65174b4b8fb9/a4a0c2d96ae0/05679252401-e1/05679252401-e1.jpg?ts=1723125535033&w=750&f=auto",
       "description": "Relaxed-fit shirt with a camp collar and short sleeves. Split hem. Button-up front.\n\n",
+      "stock": "5"
+    },
+    {
+      "id": "1a05",
+      "title": "t-shirt",
+      "price": "200",
+      "category": "t-shirt",
+      "image": "https://www.lacoste.in/media/catalog/product/l/1/l1212_132_24_2.jpg",
+      "description": "Lacoste Men Applique Polo Collar Pure Cotton T-shirt ",
       "stock": "5"
     }
   ],

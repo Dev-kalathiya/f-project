@@ -10,11 +10,11 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
   const dispatch = useDispatch();
-
+const baseurl = "https://json-server-deployment-zln4.onrender.com"
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/product/${id}`);
+        const response = await axios.get(`${baseurl}/product/${id}`);
         setProduct(response.data);
       } catch (error) {
         console.error('Error fetching product details:', error);

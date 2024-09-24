@@ -12,11 +12,11 @@ const Products = () => {
   const [sortOption, setSortOption] = useState('default');
   const [loading, setLoading] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
-
+ const baseurl = "https://json-server-deployment-zln4.onrender.com"
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/product');
+        const response = await axios.get(`${baseurl}/product`);
         setProducts(response.data);
       } catch (error) {
         console.error('Error fetching products:', error);

@@ -166,17 +166,18 @@ const Home = () => {
 
       {/* Fourth Section: Showroom with Live Counting */}
       <div
-        className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-white"
+         className="relative h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center text-center text-white"
+         
         style={{
           backgroundImage:
             "url(https://i.ibb.co/8jvyHNz/futuristic-store-with-abstract-concept-architecture-23-2150862090-transformed.jpg)",
         }}
       >
-        <div className="text-center">
+        <div className="text-center  p-8 bg-black bg-opacity-50 rounded-lg">
           <h2 className="text-6xl font-bold">
             {customers.toLocaleString()}+ Happy Customers
           </h2>
-          <p className="text-2xl mt-4">And counting!</p>
+          
         </div>
       </div>
 
@@ -193,6 +194,11 @@ const Home = () => {
             src="https://cdn0.iconfinder.com/data/icons/payment-method/480/rupay_payment_card_bank-512.png"
             alt="RuPay"
             className="h-12 mx-5 "
+          />
+          <img
+            src="https://i.pinimg.com/originals/38/2f/0a/382f0a8cbcec2f9d791702ef4b151443.png"
+            alt="Visa"
+            className="h-8"
           />
           {/* Add more payment method logos as needed */}
         </div>

@@ -3,7 +3,16 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../redux/cartSlice";
-import { AiOutlineLoading3Quarters, AiOutlineDown, AiOutlineSearch, AiOutlineFilter, AiOutlineSortAscending, AiOutlineSortDescending } from 'react-icons/ai';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { 
+  AiOutlineLoading3Quarters, 
+  AiOutlineDown, 
+  AiOutlineSearch, 
+  AiOutlineFilter, 
+  AiOutlineSortAscending, 
+  AiOutlineSortDescending 
+} from 'react-icons/ai';
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,7 +21,8 @@ const Products = () => {
   const [sortOption, setSortOption] = useState('default');
   const [loading, setLoading] = useState(true);
   const [dropdownOpen, setDropdownOpen] = useState(false);
- const baseurl = "https://json-server-deployment-zln4.onrender.com"
+  const baseurl = "https://json-server-deployment-zln4.onrender.com";
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
@@ -37,6 +47,17 @@ const Products = () => {
       image: product.image,
       quantity: 1
     }));
+
+    // Show Toastify notification
+    toast.success(`${product.title} added to cart!`, {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const handleSearch = (e) => setSearchTerm(e.target.value);
@@ -93,7 +114,6 @@ const Products = () => {
                     <option value="fashion">fashion</option>
                     <option value="t-shirt">t-shirt</option>
                     <option value="shoes">Shoes</option>
-                    {/* Add more categories as needed */}
                   </select>
                 </div>
                 <div className="p-4 flex items-center space-x-2 cursor-pointer hover:bg-gray-100">
@@ -136,7 +156,7 @@ const Products = () => {
                         <h3 className="text-lg font-semibold truncate">{product.title}</h3>
                         <p className="text-gray-900 font-semibold truncate">{product.description}</p>
                         <div className="flex items-center justify-between mt-2">
-                          <p className="text-gray-900 font-semibold">{product.price}</p>
+                          <p className="text-gray-900 font-semibold"> ₹{product.price}</p>
                           <div className="flex items-center">
                             <span className="text-yellow-400 mr-2">★</span>
                             <span>{product.rating || 4.3}</span>
@@ -158,6 +178,9 @@ const Products = () => {
         )}
       </div>
 
+      {/* Toastify Container */}
+      <ToastContainer />
+
       {/* Footer */}
       <footer className="bg-black text-white py-8 text-center">
         <p>© {new Date().getFullYear()} Damas Clothing. All rights reserved.</p>
@@ -169,10 +192,9 @@ const Products = () => {
           />
           <img
             src="https://cdn0.iconfinder.com/data/icons/payment-method/480/rupay_payment_card_bank-512.png"
-            alt="RuPay"
+            alt="Rupay"
             className="h-8"
           />
-          {/* Add more payment method logos as needed */}
         </div>
       </footer>
     </div>

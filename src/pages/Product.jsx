@@ -113,7 +113,7 @@ const Products = () => {
                     <option value="shirt">shirt</option>
                     <option value="fashion">fashion</option>
                     <option value="t-shirt">t-shirt</option>
-                    <option value="shoes">Shoes</option>
+                    <option value="hoodie">hoodie</option>
                   </select>
                 </div>
                 <div className="p-4 flex items-center space-x-2 cursor-pointer hover:bg-gray-100">
@@ -143,36 +143,46 @@ const Products = () => {
               <p className="text-center text-xl text-gray-700">No products found.</p>
             ) : (
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                {filteredProducts.map((product) => (
-                  <div key={product.id} className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transition-transform transform hover:scale-105">
-                    <Link to={`/products/${product.id}`}>
-                      <div className="relative">
-                        {product.discount && (
-                          <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">-{product.discount}%</span>
-                        )}
-                        <img src={product.image} alt={product.title} className="h-48 w-full object-cover" />
-                      </div>
-                      <div className="flex-1 p-4">
-                        <h3 className="text-lg font-semibold truncate">{product.title}</h3>
-                        <p className="text-gray-900 font-semibold truncate">{product.description}</p>
-                        <div className="flex items-center justify-between mt-2">
-                          <p className="text-gray-900 font-semibold"> ₹{product.price}</p>
-                          <div className="flex items-center">
-                            <span className="text-yellow-400 mr-2">★</span>
-                            <span>{product.rating || 4.3}</span>
-                          </div>
+              {filteredProducts.map((product) => (
+                <div
+                  key={product.id}
+                  className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transition-transform transform hover:scale-105"
+                >
+                  <Link to={`/products/${product.id}`}>
+                    <div className="relative">
+                      {product.discount && (
+                        <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">
+                          -{product.discount}%
+                        </span>
+                      )}
+                      {/* Set a fixed height and cover the image */}
+                      <img
+                        src={product.image}
+                        alt={product.title}
+                        className="h-64 w-full object-cover object-center"
+                      />
+                    </div>
+                    <div className="flex-1 p-4">
+                      <h3 className="text-lg font-semibold truncate">{product.title}</h3>
+                      <p className="text-gray-900 font-semibold truncate">{product.description}</p>
+                      <div className="flex items-center justify-between mt-2">
+                        <p className="text-gray-900 font-semibold"> ₹{product.price}</p>
+                        <div className="flex items-center">
+                          <span className="text-yellow-400 mr-2">★</span>
+                          <span>{product.rating || 4.3}</span>
                         </div>
                       </div>
-                    </Link>
-                    <button
-                      onClick={() => handleAddToCart(product)}
-                      className="bg-green-500 text-white px-4 py-2 rounded-b-lg hover:bg-green-600 transition duration-300"
-                    >
-                      Add to Cart
-                    </button>
-                  </div>
-                ))}
-              </div>
+                    </div>
+                  </Link>
+                  <button
+                    onClick={() => handleAddToCart(product)}
+                    className="bg-green-500 text-white px-4 py-2 rounded-b-lg hover:bg-green-600 transition duration-300"
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              ))}
+            </div>
             )}
           </>
         )}

@@ -18,7 +18,7 @@ const Home = () => {
             return 145250;
           }
         });
-      }, 10); // Update every 50ms for a smoother animation
+      }, 30); // Update every 50ms for a smoother animation
       return () => clearInterval(interval);
     }
   }, [customers]);

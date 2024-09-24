@@ -62,7 +62,7 @@ import React from 'react'
 const Error = () => {
   return (
     <div>
-      
+      <h1>you find wrong path</h1>
     </div>
   )
 }

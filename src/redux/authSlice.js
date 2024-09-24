@@ -6,7 +6,7 @@ import axios from 'axios';
 import { toast } from 'react-toastify';
 
 
-const userurl ="https://json-server-deployment-zln4.onrender.com/"
+const userurl ="https://json-server-deployment-zln4.onrender.com"
 
 // Async thunks for signup and login
 export const signupUser = createAsyncThunk('auth/signupUser', async (userData, { rejectWithValue }) => {

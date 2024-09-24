@@ -125,7 +125,7 @@ const Products = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
                 {filteredProducts.map((product) => (
                   <div key={product.id} className="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col transition-transform transform hover:scale-105">
-                    <Link to={`/product/${product.id}`}>
+                    <Link to={`/products/${product.id}`}>
                       <div className="relative">
                         {product.discount && (
                           <span className="absolute top-2 right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full">-{product.discount}%</span>

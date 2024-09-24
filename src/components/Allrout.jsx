@@ -22,7 +22,7 @@ const Allrout = () => {
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={ <PrivateRoute><Admin /></PrivateRoute> } />
           <Route path='/cart' element={<PrivateRoute><CartPage/></PrivateRoute>} />
           <Route path='/*' element={<Error />} />
         </Routes>

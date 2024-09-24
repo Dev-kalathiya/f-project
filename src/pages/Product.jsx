@@ -136,7 +136,7 @@ const Products = () => {
                         <h3 className="text-lg font-semibold truncate">{product.title}</h3>
                         <p className="text-gray-900 font-semibold truncate">{product.description}</p>
                         <div className="flex items-center justify-between mt-2">
-                          <p className="text-gray-900 font-semibold">${product.price}</p>
+                          <p className="text-gray-900 font-semibold">{product.price}</p>
                           <div className="flex items-center">
                             <span className="text-yellow-400 mr-2">★</span>
                             <span>{product.rating || 4.3}</span>

@@ -1,9 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// Helper function to load cart items from local storage
+const loadCartFromLocalStorage = () => {
+  const savedCart = localStorage.getItem('cartItems');
+  return savedCart ? JSON.parse(savedCart) : [];
+};
+
+// Helper function to save cart items to local storage
+const saveCartToLocalStorage = (items) => {
+  localStorage.setItem('cartItems', JSON.stringify(items));
+};
+
+// Define the cart slice
 const cartSlice = createSlice({
   name: 'cart',
   initialState: {
-    items: [],
+    items: loadCartFromLocalStorage(),  // Load initial state from local storage if available
   },
   reducers: {
     addToCart(state, action) {
@@ -13,9 +25,11 @@ const cartSlice = createSlice({
       } else {
         state.items.push(action.payload);
       }
+      saveCartToLocalStorage(state.items);  // Save updated cart to local storage
     },
     removeFromCart(state, action) {
       state.items = state.items.filter(item => item.id !== action.payload);
+      saveCartToLocalStorage(state.items);  // Save updated cart to local storage
     },
     updateQuantity(state, action) {
       const { id, quantity } = action.payload;
@@ -23,10 +37,11 @@ const cartSlice = createSlice({
       if (item) {
         item.quantity = quantity;
       }
+      saveCartToLocalStorage(state.items);  // Save updated cart to local storage
     },
-    // Define the clearCart action here
     clearCart(state) {
       state.items = [];
+      localStorage.removeItem('cartItems');  // Clear cart from local storage
     },
   },
 });

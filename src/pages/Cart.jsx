@@ -12,6 +12,7 @@ const CartPage = () => {
   const [discountCode, setDiscountCode] = useState('');
   const [discount, setDiscount] = useState(0);
   const [isCheckoutComplete, setIsCheckoutComplete] = useState(false);
+  const [isDiscountApplied, setIsDiscountApplied] = useState(false); // Track discount code usage
 
   const handleQuantityChange = (id, quantity) => {
     dispatch(updateQuantity({ id, quantity }));
@@ -31,6 +32,7 @@ const CartPage = () => {
     if (discountCode === 'SAVE10') {
       setDiscount(0.1 * getTotalPrice());
       toast.success('Discount applied successfully!');
+      setIsDiscountApplied(true); // Disable further discount application
     } else {
       toast.error('Invalid discount code');
     }
@@ -126,10 +128,14 @@ const CartPage = () => {
                     onChange={(e) => setDiscountCode(e.target.value)}
                     placeholder="Enter discount code"
                     className="p-2 border rounded-lg w-full sm:w-64"
+                    disabled={isDiscountApplied} // Disable input after discount is applied
                   />
                   <button
                     onClick={handleApplyDiscount}
-                    className="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition-colors"
+                    className={`bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors ${
+                      isDiscountApplied ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+                    }`}
+                    disabled={isDiscountApplied} // Disable button after discount is applied
                   >
                     Apply
                   </button>

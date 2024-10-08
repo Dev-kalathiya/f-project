@@ -136,6 +136,7 @@ const Products = () => {
         {loading ? (
           <div className="flex justify-center items-center">
             <AiOutlineLoading3Quarters className="animate-spin text-4xl text-green-500" />
+            <h1>wait patiently... </h1>
           </div>
         ) : (
           <>

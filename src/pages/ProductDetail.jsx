@@ -63,7 +63,7 @@ const baseurl = "https://json-server-deployment-zln4.onrender.com"
                 <div className="p-6 md:w-1/2">
                   <h1 className="text-4xl font-bold mb-4">{product.title}</h1>
                   <p className="text-gray-700 mb-4">{product.description}</p>
-                  <p className="text-gray-900 font-semibold text-xl mb-4">${product.price}</p>
+                  <p className="text-gray-900 font-semibold text-xl mb-4">₹{product.price}</p>
                   <div className="flex items-center mb-4">
                     <span className="text-yellow-400 mr-2">★</span>
                     <span>{product.rating || 4.3}</span>

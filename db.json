@@ -21,7 +21,7 @@
     {
       "id": "1b33",
       "title": "FUNCKY JACKET",
-      "price": "100000",
+      "price": "6500",
       "category": "jacket",
       "image": "https://img.freepik.com/free-photo/still-life-rendering-jackets-display_23-2149745028.jpg?t=st=1726906501~exp=1726910101~hmac=fe4a19163b3db909bad93c60f284a53a0079d6d1678bca217e6b1aba3eee6749&w=1380",
       "description": "Cotton Round Zara Designer Jackets For Men "
@@ -37,7 +37,7 @@
     {
       "id": "3981",
       "title": "shirt",
-      "price": "150",
+      "price": "1600",
       "category": "shirt",
       "image": "https://static.zara.net/assets/public/9bec/070d/65174b4b8fb9/a4a0c2d96ae0/05679252401-e1/05679252401-e1.jpg?ts=1723125535033&w=750&f=auto",
       "description": "Relaxed-fit shirt with a camp collar and short sleeves. Split hem. Button-up front.\n\n",
@@ -46,12 +46,13 @@
     {
       "id": "1a05",
       "title": "t-shirt",
-      "price": "200",
+      "price": "3999",
       "category": "t-shirt",
       "image": "https://www.lacoste.in/media/catalog/product/l/1/l1212_132_24_2.jpg",
       "description": "Lacoste Men Applique Polo Collar Pure Cotton T-shirt ",
       "stock": "5"
     }
+    
   ],
   "cart": []
 }

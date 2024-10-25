@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // Import slider styles
+import "react-responsive-carousel/lib/styles/carousel.min.css"; 
 
 const Home = () => {
-  // Live customer counting state
+ 
   const [customers, setCustomers] = useState(140000); // Start counting from 140,000
 
-  // Update customer count animation
+
   useEffect(() => {
     if (customers < 145250) {
       const interval = setInterval(() => {
         setCustomers((prev) => {
           if (prev < 145250) {
-            return prev + Math.floor(Math.random() * 10 + 3); // Random increment between 5 and 15 for smoother effect
+            return prev + Math.floor(Math.random() * 10 + 3); 
           } else {
-            clearInterval(interval); // Stop the interval when count reaches 150,000
+            clearInterval(interval); 
             return 145250;
           }
         });
-      }, 30); // Update every 50ms for a smoother animation
+      }, 30); 
       return () => clearInterval(interval);
     }
   }, [customers]);

@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -12,16 +11,29 @@ const Admin = () => {
     stock: '',
   });
 
-  const [products, setProducts] = useState([]); // To store the list of products
-  const [editMode, setEditMode] = useState(false); // Track if editing a product
-  const [editProductId, setEditProductId] = useState(null); // Store the product ID being edited
+  const [products, setProducts] = useState([]); 
+  const [editMode, setEditMode] = useState(false); 
+  const [editProductId, setEditProductId] = useState(null); 
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [inputPassword, setInputPassword] = useState(''); // Track entered password
 
   const baseurl = "https://json-server-deployment-zln4.onrender.com";
+  <h1>password is 12345</h1>
+
+  const handlePasswordSubmit = () => {
+    if (inputPassword === '12345') {
+      setIsAuthenticated(true);
+    } else {
+      alert('Incorrect Password');
+    }
+  };
 
   // Fetch products when component mounts
   useEffect(() => {
-    fetchProducts();
-  }, []);
+    if (isAuthenticated) {
+      fetchProducts();
+    }
+  }, [isAuthenticated]);
 
   const fetchProducts = async () => {
     try {
@@ -80,8 +92,29 @@ const Admin = () => {
     }
   };
 
+  // If not authenticated, show password input
+  if (!isAuthenticated) {
+    return (
+      <div className="container mx-auto p-6">
+        <h2 className="text-2xl font-bold mb-4">Admin Login</h2>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          value={inputPassword}
+          onChange={(e) => setInputPassword(e.target.value)}
+          className="border p-2 rounded"
+        />
+        <button onClick={handlePasswordSubmit} className="bg-blue-500 text-white px-4 py-2 rounded ml-2">
+          Submit
+        </button>
+        <p className="text-gray-600 mt-2">Admin password is <strong>12345</strong></p> {/* Password hint */}
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto p-6">
+      
       <h2 className="text-2xl font-bold mb-4">{editMode ? 'Edit Product' : 'Add New Product'}</h2>
       <form onSubmit={handleSubmit} className="bg-white shadow-md rounded-lg p-6 space-y-4">
         <div className="flex flex-col">
@@ -99,7 +132,7 @@ const Admin = () => {
         <div className="flex flex-col">
           <label htmlFor="image" className="mb-1 font-semibold">Image URL</label>
           <input type="text" id="image" name="image" placeholder="Image URL" value={product.image} onChange={handleChange} className="border p-2 rounded" required />
-          {product.image && <img src={product.image} alt="Product Preview" className="mt-4 max-w-xs" />} {/* Image preview */}
+          {product.image && <img src={product.image} alt="Product Preview" className="mt-4 max-w-xs" />}
         </div>
         <div className="flex flex-col">
           <label htmlFor="description" className="mb-1 font-semibold">Description</label>

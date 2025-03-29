@@ -1,6 +1,4 @@
 
-
-// export default authSlice.reducer;
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { toast } from 'react-toastify';
@@ -16,9 +14,9 @@ export const signupUser = createAsyncThunk('auth/signupUser', async (userData, {
     if (existingUser.data.length > 0) {
       return rejectWithValue('User already exists');
     }
-    // If not, create a new user
+  
     const response = await axios.post(`${userurl}/user`, userData);
-    localStorage.setItem('user', JSON.stringify(response.data)); // Save user data in localStorage
+    localStorage.setItem('user', JSON.stringify(response.data)); 
     return response.data;
   } catch (error) {
     return rejectWithValue(error.message);
@@ -31,7 +29,7 @@ export const loginUser = createAsyncThunk('auth/loginUser', async (credentials, 
     const response = await axios.get(`${userurl}/user?email=${credentials.email}`);
     const user = response.data[0];
     if (user && user.password === credentials.password) {
-      localStorage.setItem('user', JSON.stringify(user)); // Save user data in localStorage
+      localStorage.setItem('user', JSON.stringify(user));
       return user;
     }
     return rejectWithValue('Invalid email or password');

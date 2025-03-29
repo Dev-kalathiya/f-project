@@ -183,7 +183,7 @@ const Home = () => {
 
       {/* Fifth Section: Footer */}
       <footer className="bg-black text-white py-8 text-center">
-        <p>© {new Date().getFullYear()} Damas Clothing. All rights reserved.</p>
+        <p className="">© {new Date().getFullYear()} Damas Clothing. All rights reserved.</p>
         <div className="flex justify-center space-x-4 mt-4 items-center">
           <img
             src="https://logos-world.net/wp-content/uploads/2020/06/Visa-Logo-2006.png"
@@ -200,7 +200,7 @@ const Home = () => {
             alt="Visa"
             className="h-8"
           />
-          {/* Add more payment method logos as needed */}
+         
         </div>
       </footer>
     </div>

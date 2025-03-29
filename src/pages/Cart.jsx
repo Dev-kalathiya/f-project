@@ -132,8 +132,8 @@ const CartPage = () => {
                   />
                   <button
                     onClick={handleApplyDiscount}
-                    className={`bg-blue-500 text-white px-4 py-2 rounded-lg transition-colors ${
-                      isDiscountApplied ? 'opacity-50 cursor-not-allowed' : 'hover:bg-blue-600'
+                    className={`bg-indigo-600 text-white px-4 py-2 rounded-lg transition-colors ${
+                      isDiscountApplied ? 'opacity-50 cursor-not-allowed' : 'hover:bg-indigo-900'
                     }`}
                     disabled={isDiscountApplied} // Disable button after discount is applied
                   >
@@ -149,7 +149,7 @@ const CartPage = () => {
                 <h3 className="text-lg font-semibold">Total: ₹{getTotalPrice()}</h3>
                 <button
                   onClick={handleCheckout}
-                  className="bg-green-500 text-white px-6 py-2 rounded-lg hover:bg-green-600 transition-colors mt-4 sm:mt-0"
+                  className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-900 transition-colors mt-4 sm:mt-0"
                 >
                   Checkout
                 </button>

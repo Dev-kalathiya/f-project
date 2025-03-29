@@ -21,19 +21,19 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-neutral-300 p-3 fixed top-0 left-0 w-full z-10 shadow-md">
+    <nav className="bg-neutral-100 p-3 fixed top-0 left-0 w-full z-10 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <Link to="/" className="flex items-center">
-          <span className="text-black ml-2 text-lg sm:text-xl font-bold">DAMAS</span>
+          <span className="text-indigo-700 ml-2 text-3xl sm:text-xl font-bold">DAMAS</span>
         </Link>
 
         {/* Links - Hidden by default on small screens */}
         <div className="hidden md:flex items-center space-x-4 sm:space-x-6">
-          <Link to="/" className="text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Home</Link>
-          <Link to="/products" className="text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Products</Link>
-          <Link to="/admin" className="text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Admin</Link>
-          <Link to="/cart" className="text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">
+          <Link to="/" className="text-dark-400 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Home</Link>
+          <Link to="/products" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Products</Link>
+          <Link to="/admin" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Admin</Link>
+          <Link to="/cart" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">
             Cart ({cartItems})
           </Link>
         </div>
@@ -42,8 +42,8 @@ const Navbar = () => {
         <div className="flex items-center space-x-4 sm:space-x-6">
           {isLoggedIn ? (
             <>
-              <span className="hidden md:inline-block text-black border-2 rounded-full bg-zinc-700 px-3 py-1 text-sm sm:text-base font-medium">{user.name}</span>
-              <button onClick={handleLogout} className="text-slate-700 hover:bg-red-700 hover:text-white px-2 py-1 rounded-md text-sm sm:text-base font-medium">
+              <span className="hidden md:inline-block text-black border-2 rounded-full bg-green-100 px-3 py-1 text-sm sm:text-base font-medium">{user.name}</span>
+              <button onClick={handleLogout} className="text-dark-700 hover:bg-blue-700 hover:text-white px-3 py-2 rounded-xl text-sm sm:text-base font-medium">
                 Logout
               </button>
             </>
@@ -65,14 +65,14 @@ const Navbar = () => {
       {/* Mobile Menu - Visible when the hamburger is clicked */}
       {isMenuOpen && (
         <div className="md:hidden bg-neutral-300 p-4 space-y-4">
-          <Link to="/" onClick={toggleMenu} className="block text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">Home</Link>
-          <Link to="/products" onClick={toggleMenu} className="block text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">Products</Link>
-          <Link to="/admin" onClick={toggleMenu} className="block text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">Admin</Link>
-          <Link to="/cart" onClick={toggleMenu} className="block text-slate-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">
+          <Link to="/" onClick={toggleMenu} className="block text-dark-700 hover:bg-blue-500 px-2 py-1 rounded-md text-l font-medium">Home</Link>
+          <Link to="/products" onClick={toggleMenu} className="block text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">Products</Link>
+          <Link to="/admin" onClick={toggleMenu} className="block text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">Admin</Link>
+          <Link to="/cart" onClick={toggleMenu} className="block text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm font-medium">
             Cart ({cartItems})
           </Link>
           {isLoggedIn ? (
-            <button onClick={() => { handleLogout(); toggleMenu(); }} className="block text-slate-700 hover:bg-red-700 hover:text-white px-2 py-1 rounded-md text-sm font-medium">
+            <button onClick={() => { handleLogout(); toggleMenu(); }} className="block text-dark-700 hover:bg-red-700 hover:text-white px-2 py-1 rounded-md text-sm font-medium">
               Logout
             </button>
           ) : (

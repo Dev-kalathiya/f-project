@@ -11,6 +11,7 @@ import ProductDetail from '../pages/ProductDetail';  // Ensure correct import
 import { AuthProvider } from '../AuthContext';  // Ensure this is correctly set up
 import PrivateRoute from '../router/PrivateRoute';
 import Products from '../pages/Product';
+import ExploreCollections from '../pages/ExploreCollections';
 
 const Allrout = () => {
   return (
@@ -19,6 +20,7 @@ const Allrout = () => {
         <Routes>
           <Route path='/' element={<PrivateRoute><Home /></PrivateRoute>} />
           <Route path='/products' element={<PrivateRoute><Products/></PrivateRoute>} />
+          <Route path='/collections' element={<PrivateRoute><ExploreCollections/></PrivateRoute>} />
           <Route path="/products/:id" element={<ProductDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />

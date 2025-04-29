@@ -32,6 +32,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center space-x-4 sm:space-x-6">
           <Link to="/" className="text-dark-400 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Home</Link>
           <Link to="/products" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Products</Link>
+          <Link to="/collections" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">collections</Link>
           <Link to="/admin" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">Admin</Link>
           <Link to="/cart" className="text-dark-700 hover:bg-slate-100 px-2 py-1 rounded-md text-sm sm:text-base font-medium">
             Cart ({cartItems})
